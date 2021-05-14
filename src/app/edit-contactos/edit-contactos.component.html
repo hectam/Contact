@@ -1,0 +1,61 @@
+<div *ngIf="selectedContact != null">
+    <div class="card-body">
+        <h2>{{selectedContact.nombre}}</h2>
+        <div class="card-text">
+          <div class=row>
+
+            <div class="col">
+              <div class="form-group">
+                Titulo
+                <div class="row mx-2" >
+
+                 
+
+                  <select name="cars" id="cars" [(ngModel)]="selectedContact.titulo">
+                    <option value="{{titulo[0]}}">{{titulo[0]}}</option>
+                    <option value="{{titulo[1]}}">{{titulo[1]}}</option>
+                    <option value="{{titulo[2]}}">{{titulo[2]}}</option>
+                   
+                  </select>
+                  
+                </div>
+              </div>
+              
+            </div>
+            <div class="col">
+              <div class="form-group">
+                Nombre
+                <div class="row mx-2" >
+                  <input type="text" class="form-control" [(ngModel)]="selectedContact.nombre">
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                Correo
+                <div class="row mx-2" >
+                  <input type="text" class="form-control" [(ngModel)]="selectedContact.correo">
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                Numero telefonico
+                <div class="row mx-2" >
+                  <input type="text" class="form-control" [(ngModel)]="selectedContact.numero">
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+        <button type="button" class="btn btn-danger my-2" (click)="eliminarContacto()" >Eliminar</button>
+          
+    </div>
+</div>
+      
